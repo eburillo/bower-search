@@ -14,9 +14,23 @@ ReactDOM.render(
 
 // eslint-disable-next-line
 injectGlobal`
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+  html {
+    height: 100%;
+  }
   body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    height: 100%;
+    padding-bottom: 60px;
+    position: relative;
+  }
+  #root {
+    height: 100%;
   }
 `;

@@ -12,18 +12,9 @@ export class ListContainer extends Component {
   render() {
     var {packages} = this.props;
 		return (
-      <div>
   			<List packages={packages.list}></List>
-        {packages.list.length == 0 && this._renderErrorMessage()}
-      </div>
     );
 	}
-
-  _renderErrorMessage = (message) => {
-    return (
-    <p>{this.props.packages.message}</p>
-    )
-  }
 
 }
 

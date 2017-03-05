@@ -1,27 +1,46 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import logo from '../assets/bower-logo.svg';
+import variables from '../styles/variables';
 
 class Header extends Component {
   render() {
     return (
       <StyledHeader>
-        <Logo src={logo} alt="logo"></Logo>
-        <h2>Bower Search App</h2>
+        <HeaderContentWrapper>
+          <Logo src={logo} alt="logo"></Logo>
+          <Title>Bower Search App</Title>
+        </HeaderContentWrapper>
       </StyledHeader>
     );
   }
 }
 
+const COLOURS = variables.colours;
+const MAX_WIDTH = variables.maxWidth;
+
 const StyledHeader = styled.header`
-  background-color: #FFCC2F;
-  padding: 20px;
-  color: #543729;
-  text-align: center;
+  height: 70px;
+  background-color: ${COLOURS.headerBackground};
+  padding: 10px;
+  color: ${COLOURS.headerTitle};
+`;
+
+const HeaderContentWrapper = styled.div`
+  max-width: ${MAX_WIDTH};
+  margin: 0 auto;
 `;
 
 const Logo = styled.img`
-  height: 50px;
+  height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+`;
+
+const Title = styled.h2`
+  display: inline-block;
+  vertical-align: middle;
+  margin: 13px;
 `;
 
 export default Header;

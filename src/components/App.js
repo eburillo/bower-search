@@ -1,19 +1,38 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
+import variables from '../styles/variables';
 import Header from './Header';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
-import Content from './Content';
+import ContentContainer from '../containers/ContentContainer';
+
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <Wrapper>
         <Header></Header>
-        <Sidebar></Sidebar>
-        <Content></Content>
+        <Main>
+          <Sidebar></Sidebar>
+          <ContentContainer></ContentContainer>
+        </Main>
         <Footer></Footer>
-      </div>
+      </Wrapper>
     );
   }
 }
+
+const MAX_WIDTH = variables.maxWidth;
+
+const Wrapper = styled.div`
+  height: 100%;
+  overflow: hidden;
+`;
+
+const Main = styled.div`
+  width: 100%;
+  max-width: ${MAX_WIDTH};
+  margin: 0 auto;
+  height: calc(100% - 70px);
+`;
 
 export default App;

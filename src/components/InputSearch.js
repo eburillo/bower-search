@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
+import variables from '../styles/variables.js';
 
 class InputSearch extends Component {
 
 	render() {
 		return (
-		  <input
+		  <StyledInput
         type="text"
         onKeyDown={this.props.onKeyDown}
         onChange={this.props.onChange}
@@ -14,5 +16,26 @@ class InputSearch extends Component {
 	}
 
 }
+
+const COLOURS = variables.colours;
+
+const StyledInput = styled.input`
+	min-height: 34px;
+	padding: 6px 8px;
+	font-size: 14px;
+	line-height: 20px;
+	color: ${COLOURS.inputColor};
+	vertical-align: middle;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: right 8px center;
+	border: 1px solid #d1d5da;
+	border-radius: 3px;
+	outline: none;
+	box-shadow: inset 0 1px 2px ${COLOURS.inputShadow};
+	@media (max-width: 750px) {
+    width: 100%;
+  }
+`;
 
 export default InputSearch;
