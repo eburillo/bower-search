@@ -1,5 +1,6 @@
 import ActionTypes from '../actions/action-types.js'
 import url from 'url';
+/* eslint-disable */
 
 const messages = {
  NO_PACKAGES_FOUND: "No packages were found.",

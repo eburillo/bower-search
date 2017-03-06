@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import url from 'url';
 import styled from 'styled-components';
-import variables from '../styles/variables'
-import starLogo from '../assets/sort-by-stars.svg';
+import variables from '../styles/variables';
+import starLogo from '../assets/star.svg';
 
 class Package extends Component {
   render() {

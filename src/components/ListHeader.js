@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import variables from '../styles/variables';
 import SortButtonContainer from '../containers/SortButtonContainer';
 
 class ListHeader extends Component {
@@ -14,11 +15,15 @@ class ListHeader extends Component {
   }
 }
 
+const MEDIAQUERIES = variables.mq;
 
 const StyledListHeader = styled.header`
   height: 50px;
-  padding: 10px;
-  text-align: right
+  padding: 8px;
+  text-align: right;
+  @media (max-width: ${MEDIAQUERIES.mobile}) {
+    height: 30px;
+  }
 `;
 
 export default ListHeader;
