@@ -5,6 +5,7 @@ const variables = {
     "packageTitle"    : "#008ec4",
     "packageOwner"    : "#666",
     "packageText"     : "#999",
+    "packageHover"    : "#24292e",
     "inputColor"      : "#24292e",
     "inputShadow"     : "rgba(27,31,35,0.075)",
     "footerBackground": "#2D2D2D",

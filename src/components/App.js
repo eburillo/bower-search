@@ -30,7 +30,7 @@ const Wrapper = styled.div`
 
 const Main = styled.div`
   width: 100%;
-  max-width: ${MAX_WIDTH};
+  //max-width: ${MAX_WIDTH};
   margin: 0 auto;
   height: calc(100% - 70px);
 `;

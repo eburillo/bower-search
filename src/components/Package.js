@@ -43,8 +43,12 @@ const Title = styled.h3`
   margin: 0 0 6px;
   float: left;
   > a {
+      font-weight: lighter;
       text-decoration: none;
       color: ${COLOURS.packageTitle};
+      &:hover {
+        text-decoration: underline;
+      }
   }
 `;
 
@@ -55,16 +59,22 @@ const Url = styled.a`
   float: left;
   clear: left;
   text-decoration: none;
+  &:hover {
+    color: ${COLOURS.packageHover}
+  }
 `;
 
 const Owner = styled.a`
-font-size: 13px;
-color: ${COLOURS.packageOwner};
-display: inline-block;
-text-decoration: none;
-float: left;
-margin-left: 15px;
-margin-top: 5px;
+  font-size: 13px;
+  color: ${COLOURS.packageOwner};
+  display: inline-block;
+  text-decoration: none;
+  float: left;
+  margin-left: 15px;
+  margin-top: 5px;
+  &:hover {
+    color: ${COLOURS.packageHover}
+  }
 `;
 
 const Stars = styled.span`
@@ -76,19 +86,19 @@ const Stars = styled.span`
   margin-left: 15px;
   padding-top: 2px;
   margin-top: 0px;
-&:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 15px;
-  height: 15px;
-  display: block;
-  mask: url(${starLogo}) no-repeat 50% 50%;
-  -webkit-mask-size: cover;
-  mask-size: cover;
-  background-color: gold;
-}
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    display: block;
+    mask: url(${starLogo}) no-repeat 50% 50%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: gold;
+  }
 `;
 
 export default Package;

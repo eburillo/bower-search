@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import variables from '../styles/variables.js';
 import ListContainer from '../containers/ListContainer';
-import ListHeader from './ListHeader';
 import MessageContainer from '../containers/MessageContainer';
+import ListHeader from './ListHeader';
 
 class Content extends Component {
   render() {

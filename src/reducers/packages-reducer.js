@@ -1,4 +1,5 @@
 import ActionTypes from '../actions/action-types.js'
+import url from 'url';
 
 const messages = {
  NO_PACKAGES_FOUND: "No packages were found.",
@@ -10,6 +11,11 @@ const initialState = {
 		message: "",
 		list: []
 	}
+}
+
+const _getOwner = (obj) => {
+  const path = url.parse(obj.repository_url).path;
+  return path.slice(path.indexOf('/') + 1, path.lastIndexOf('/')).toLowerCase();
 }
 
 const packagesReducer = function(state = initialState, action) {
@@ -38,6 +44,43 @@ const packagesReducer = function(state = initialState, action) {
 						list: []
 					}
 				};
+    case ActionTypes.SORT_BY_NAME:
+			return {
+				packages: {
+					message: "",
+					list: state.packages.list.sort((a, b) => {
+              if (a.name.toLowerCase() < b.name.toLowerCase()) {
+                  return -1;
+              }
+              if (a.name.toLowerCase() > b.name.toLowerCase()) {
+                  return 1;
+              }
+          })
+				}
+			};
+    case ActionTypes.SORT_BY_OWNER:
+			return {
+				packages: {
+					message: "",
+					list: state.packages.list.sort((a, b) => {
+              if (_getOwner(a) < _getOwner(b)) {
+                  return -1;
+              }
+              if (_getOwner(a) > _getOwner(b)) {
+                  return 1;
+              }
+          })
+				}
+			};
+    case ActionTypes.SORT_BY_STARS:
+			return {
+				packages: {
+					message: "",
+					list: state.packages.list.sort((a, b) => {
+              return b.stars - a.stars
+          })
+				}
+			};
 		default:
 			return state;
 	}

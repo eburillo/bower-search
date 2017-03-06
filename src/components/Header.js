@@ -9,7 +9,7 @@ class Header extends Component {
       <StyledHeader>
         <HeaderContentWrapper>
           <Logo src={logo} alt="logo"></Logo>
-          <Title>Bower Search App</Title>
+          <Title>Bower Search</Title>
         </HeaderContentWrapper>
       </StyledHeader>
     );
@@ -41,6 +41,7 @@ const Title = styled.h2`
   display: inline-block;
   vertical-align: middle;
   margin: 13px;
+  font-weight: lighter;
 `;
 
 export default Header;

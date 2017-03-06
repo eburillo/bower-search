@@ -18,3 +18,21 @@ export function getPackagesFailed() {
 		type: ActionTypes.GET_PACKAGES_FAILED
 	}
 }
+
+export function sortByName() {
+	return {
+		type: ActionTypes.SORT_BY_NAME
+	}
+}
+
+export function sortByOwner() {
+	return {
+		type: ActionTypes.SORT_BY_OWNER
+	}
+}
+
+export function sortByStars() {
+	return {
+		type: ActionTypes.SORT_BY_STARS
+	}
+}

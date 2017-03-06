@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import List from '../components/List.js';
+import List from '../components/List';
 import * as BowerApi from '../api/Bower';
 
 export class ListContainer extends Component {
