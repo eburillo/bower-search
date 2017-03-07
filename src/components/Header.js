@@ -17,7 +17,6 @@ class Header extends Component {
 }
 
 const COLOURS = variables.colours;
-const MAX_WIDTH = variables.maxWidth;
 
 const StyledHeader = styled.header`
   height: 70px;
@@ -27,7 +26,8 @@ const StyledHeader = styled.header`
 `;
 
 const HeaderContentWrapper = styled.div`
-  max-width: ${MAX_WIDTH};
+  width: 50%;
+  margin-left: 25%;
   margin: 0 auto;
 `;
 

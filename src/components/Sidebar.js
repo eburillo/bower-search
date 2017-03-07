@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import variables from '../styles/variables.js';
-import InputSearchContainer from '../containers/InputSearchContainer';
 
 class Sidebar extends Component {
   render() {
     return (
       <Aside>
-        <InputSearchContainer></InputSearchContainer>
+        <p>Web sites are made of lots of things — frameworks, libraries, assets, and utilities. Bower manages all these things for you.
+
+Keeping track of all these packages and making sure they are up to date (or set to the specific versions you need) is tricky. Bower to the rescue! </p>
       </Aside>
     );
   }
@@ -19,12 +20,10 @@ const Aside = styled.aside`
   display: inline-block;
   vertical-align: top;
   width: 25%;
-  padding-top: 50px;
-  padding-left: 10px;
+  padding: 50px 15px 0;
+  line-height: 21px;
   @media (max-width: ${MEDIAQUERIES.mobile}) {
-    width: 100%;
-    padding-top: 10px;
-    padding-right: 10px;
+    display: none;
   }
 `;
 

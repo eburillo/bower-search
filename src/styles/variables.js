@@ -9,7 +9,8 @@ const variables = {
     "inputColor"      : "#24292e",
     "inputShadow"     : "rgba(27,31,35,0.075)",
     "footerBackground": "#2D2D2D",
-    "footerText"      : "rgba(255,255,255, 0.7)"
+    "footerText"      : "rgba(255,255,255, 0.7)",
+    "sortButtons"     : "#666"
   },
   "mq": {
     "mobile": "750px"

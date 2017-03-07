@@ -18,7 +18,6 @@ class InputSearch extends Component {
 }
 
 const COLOURS = variables.colours;
-const MEDIAQUERIES = variables.mq;
 
 const StyledInput = styled.input`
 	min-height: 34px;
@@ -34,10 +33,8 @@ const StyledInput = styled.input`
 	border-radius: 3px;
 	outline: none;
 	box-shadow: inset 0 1px 2px ${COLOURS.inputShadow};
-	width: 90%;
-	@media (max-width: ${MEDIAQUERIES.mobile}) {
-    width: 100%;
-  }
+	width: 60%;
+	float: left;
 `;
 
 export default InputSearch;

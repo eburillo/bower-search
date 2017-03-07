@@ -25,21 +25,16 @@ class InputSearch extends Component {
 }
 
 const COLOURS = variables.colours;
-const MEDIAQUERIES = variables.mq;
 
 const StyledButton = styled.button`
 	mask-image: url(${props => props.icon});
   mask-size: cover;
-	background-color: ${COLOURS.inputColor};
+	background-color: ${COLOURS.sortButtons};
 	width: 30px;
 	height: 30px;
 	margin-right: 15px;
 	outline: 0;
 	border: 0;
-	@media (max-width: ${MEDIAQUERIES.mobile}) {
-		width: 20px;
-		height: 20px;
-  }
 `;
 
 export default InputSearch;
