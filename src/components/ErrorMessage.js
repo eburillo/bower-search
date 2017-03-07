@@ -5,7 +5,6 @@ class ErrorMessage extends Component {
   render() {
     return (
       <Message>
-        HOLA
         {this.props.text}
       </Message>
     );

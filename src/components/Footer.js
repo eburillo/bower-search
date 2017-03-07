@@ -49,11 +49,11 @@ const SocialButton = styled.a`
 
 const SocialLinkedIn = styled(SocialButton)`
   mask-image: url(${linkedinLogo});
-  margin-left: 10px;
 `;
 
 const SocialGithub = styled(SocialButton)`
   mask-image: url(${githubLogo});
+  margin-right: 10px;
 `;
 
 export default Footer;

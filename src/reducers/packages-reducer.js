@@ -10,7 +10,8 @@ const messages = {
 const initialState = {
 	packages: {
 		message: "",
-		list: []
+		list: [],
+    currentPage: 1
 	}
 }
 
@@ -29,21 +30,24 @@ const packagesReducer = function(state = initialState, action) {
 				packages: {
 					message: "",
 					list: action.packages
-				}
+				},
+        currentPage: 1
 			};
 		case ActionTypes.GET_NO_PACKAGES:
 			return {
 				packages: {
 					message: messages.NO_PACKAGES_FOUND,
 					list: []
-				}
+				},
+        currentPage: 1
 			};
 		case ActionTypes.GET_PACKAGES_FAILED:
 				return {
 					packages: {
 						message: messages.SEARCH_ERROR,
 						list: []
-					}
+					},
+          currentPage: 1
 				};
     case ActionTypes.SORT_BY_NAME:
 			return {
@@ -57,7 +61,8 @@ const packagesReducer = function(state = initialState, action) {
                   return 1;
               }
           })
-				}
+				},
+        currentPage: 1
 			};
     case ActionTypes.SORT_BY_OWNER:
 			return {
@@ -71,7 +76,8 @@ const packagesReducer = function(state = initialState, action) {
                   return 1;
               }
           })
-				}
+				},
+        currentPage: 1
 			};
     case ActionTypes.SORT_BY_STARS:
 			return {
@@ -80,7 +86,13 @@ const packagesReducer = function(state = initialState, action) {
 					list: state.packages.list.sort((a, b) => {
               return b.stars - a.stars
           })
-				}
+				},
+        currentPage: 1
+			};
+    case ActionTypes.SET_PAGE:
+			return {
+				packages: state.packages,
+        currentPage: action.currentPage
 			};
 		default:
 			return state;

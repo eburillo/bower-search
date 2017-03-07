@@ -10,11 +10,6 @@ export class ListContainer extends Component {
       BowerApi.getPackages("");
   }
 
-  state = {
-    per_page: 5,
-    counter: 0,
-    page: 1
-  }
   //
   // _handleClickNext() {
   //   if (this.state.page + 1 < this.props.packages.list.length / this.state.per_page)
@@ -27,9 +22,8 @@ export class ListContainer extends Component {
   // }
 
   render() {
-    let {packages} = this.props;
-    let list = packages.list.filter((item, i) => {
-      return i < ((this.state.page + 1) * this.state.per_page) && (this.state.per_page * this.state.page) <= i })
+    let {packages, currentPage} = this.props;
+    let list = packages.list.filter((item, i) => { return i < (currentPage * 5) && i >= 5 * (currentPage - 1)})
 		return (
       <div>
   			<List packages={list}></List>
@@ -42,7 +36,8 @@ export class ListContainer extends Component {
 
 const mapStateToProps = function(store) {
 	return ({
-		packages: store.packages
+		packages: store.packages,
+    currentPage: store.currentPage
 	})
 }
 

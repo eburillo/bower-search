@@ -26,6 +26,7 @@ injectGlobal`
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    font-weight: lighter;
     height: 100%;
     padding-bottom: 60px;
     position: relative;

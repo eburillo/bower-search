@@ -52,6 +52,6 @@ export function goToNextPag() {
 export function setPage(page) {
 	return {
 		type: ActionTypes.SET_PAGE,
-		page: page
+		currentPage: page
 	}
 }

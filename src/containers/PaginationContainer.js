@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import styled from 'styled-components';
-import variables from '../styles/variables';
-import store from '../store.js';
 import {goToPrevPag, goToNextPag, setPage} from '../actions/packages-actions.js';
+import Pagination from '../components/Pagination';
 
-export class ListContainer extends Component {
+export class PaginationContainer extends Component {
 
   render() {
     const perPage = 5;
@@ -19,56 +17,23 @@ export class ListContainer extends Component {
     }
 
     return (
-      <PaginationControls>
-        {
-            totalPages.map((page) => {
-              return <StyledPaginationButton key={page.toString()} onClick={this._setPage}>{page}</StyledPaginationButton>
-            } )
-        }
-      </PaginationControls>
+      <Pagination currentPage={this.props.currentPage} pages={totalPages} setPage={this.props.setPage}/>
     );
 	}
 
-  _setPage = page => {
-    console.log("Page ", page);
-    store.dispatch(setPage(page));
-  }//props.onSetPage(page);
-
 }
 
-const MEDIAQUERIES = variables.mq;
-
-const StyledPaginationButton = styled.button`
-  width: 60px;
-  height: 40px;
-  display: inline-block;
-  margin-right: 20px;
-  background-color: rgba(0, 0, 0, 0.05);
-  border: 1px solid #999;
-  border-radius: 6px;
-`;
-
-const PaginationControls = styled.div`
-  @media (max-width: ${MEDIAQUERIES.mobile}) {
-    text-align: center;
-  }
-`;
-
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     _handleClickPrev: () => {
-//       dispatch(goToPrevPag())
-//     },
-//     _handleClickNext: () => {
-//       dispatch(goToNextPag())
-//     }
-//   }
-// }
+const mapDispatchToProps = (dispatch) => {
+  return ({
+    setPage: (page) => {dispatch(setPage(page))}
+  })
+}
 
 const mapStateToProps = function(store) {
 	return ({
-		packages: store.packages
+		packages: store.packages,
+    currentPage: store.currentPage
 	})
 }
 
-export default connect(mapStateToProps) (ListContainer);
+export default connect(mapStateToProps, mapDispatchToProps) (PaginationContainer);
