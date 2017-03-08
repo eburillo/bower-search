@@ -33,7 +33,7 @@ const Main = styled.div`
   //max-width: ${MAX_WIDTH};
   margin: 0 auto;
   min-height: calc(100vh - 100px);
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 `;
 
 export default App;
