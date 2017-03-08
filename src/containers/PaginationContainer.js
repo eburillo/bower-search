@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import {goToPrevPag, goToNextPag, setPage} from '../actions/packages-actions.js';
+import {setPage} from '../actions/packages-actions.js';
 import Pagination from '../components/Pagination';
 
 export class PaginationContainer extends Component {

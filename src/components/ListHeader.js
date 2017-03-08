@@ -9,6 +9,7 @@ class ListHeader extends Component {
       <StyledListHeader>
         <InputSearchContainer></InputSearchContainer>
         <SortControls>
+          <SortHeader>Sort:</SortHeader>
           <SortButtonContainer type="name" />
           <SortButtonContainer type="owner" />
           <SortButtonContainer type="stars" />
@@ -22,12 +23,23 @@ const StyledListHeader = styled.header`
   margin-bottom: 1vh;
   height: 50px;
   padding: 8px;
-  text-align: right;
+  text-align: center;
+`;
+
+const SortHeader = styled.span`
+  font-size: 13px;
+  font-weight: 700;
+  color: #777;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
 `;
 
 const SortControls = styled.div`
   width: 40%;
   float: right;
+  height: 34px;
+  padding-top: 4px;
 `;
 
 export default ListHeader;

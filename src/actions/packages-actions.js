@@ -37,18 +37,6 @@ export function sortByStars() {
 	}
 }
 
-export function goToPrevPag() {
-	return {
-		type: ActionTypes.GO_TO_PREV_PAG
-	}
-}
-
-export function goToNextPag() {
-	return {
-		type: ActionTypes.GO_TO_NEXT_PAG
-	}
-}
-
 export function setPage(page) {
 	return {
 		type: ActionTypes.SET_PAGE,

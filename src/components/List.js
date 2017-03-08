@@ -33,7 +33,7 @@ const StyledList = styled.ul`
   list-style: none;
   padding: 0 10px;
   margin: 0;
-  height: calc(100% - 50px);
+  height: calc(100% - 120px) /* - list header, pagination and padding-top & bottom */;
   overflow-y: scroll;
 `;
 

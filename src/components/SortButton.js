@@ -30,9 +30,11 @@ const StyledButton = styled.button`
 	mask-image: url(${props => props.icon});
   mask-size: cover;
 	background-color: ${COLOURS.sortButtons};
-	width: 30px;
-	height: 30px;
-	margin-right: 15px;
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
 	outline: 0;
 	border: 0;
 `;

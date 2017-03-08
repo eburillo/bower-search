@@ -17,18 +17,25 @@ class Header extends Component {
 }
 
 const COLOURS = variables.colours;
+const MEDIAQUERIES = variables.mq;
 
 const StyledHeader = styled.header`
   height: 70px;
   background-color: ${COLOURS.headerBackground};
   padding: 10px;
   color: ${COLOURS.headerTitle};
+  @media (max-width: ${MEDIAQUERIES.mobile}) {
+    padding: 10px 20px;
+  }
 `;
 
 const HeaderContentWrapper = styled.div`
   width: 50%;
   margin-left: 25%;
   margin: 0 auto;
+  @media (max-width: ${MEDIAQUERIES.mobile}) {
+    width: 100%;
+  }
 `;
 
 const Logo = styled.img`

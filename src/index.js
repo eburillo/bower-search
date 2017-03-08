@@ -28,7 +28,7 @@ injectGlobal`
     font-family: sans-serif;
     font-weight: lighter;
     height: 100%;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
     position: relative;
   }
   #root {
