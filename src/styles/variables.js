@@ -12,10 +12,16 @@ const variables = {
     "footerText"      : "rgba(255,255,255, 0.7)",
     "sortButtons"     : "#666"
   },
-  "mq": {
+  fontSizes: {
+    "packageTitle"    : "16px",
+    "packageOwner"    : "13px",
+    "packageUrl"      : "12px",
+    "packageStars"    : "12px"
+  },
+  mq: {
     "mobile": "750px"
   },
-  "maxWidth": "800px"
+  maxWidth: "800px"
 }
 
 export default variables;

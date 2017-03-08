@@ -33,6 +33,7 @@ class Package extends Component {
 }
 
 const COLOURS = variables.colours;
+const FONT_SIZES = variables.fontSizes;
 
 const StyledPackage = styled.li`
   margin-bottom: 4vh;
@@ -40,7 +41,7 @@ const StyledPackage = styled.li`
 `;
 
 const Title = styled.h3`
-  font-size: 3.5vh;
+  font-size: ${FONT_SIZES.packageTitle};
   margin: 0 0 6px;
   float: left;
   > a {
@@ -54,7 +55,7 @@ const Title = styled.h3`
 `;
 
 const Url = styled.a`
-  font-size: 2.25vh;
+  font-size: ${FONT_SIZES.packageUrl};
   line-height: 16px;
   color: ${COLOURS.packageText};
   float: left;
@@ -66,7 +67,7 @@ const Url = styled.a`
 `;
 
 const Owner = styled.a`
-  font-size: 2.75vh;
+  font-size: ${FONT_SIZES.packageOwner};
   color: ${COLOURS.packageOwner};
   display: inline-block;
   text-decoration: none;
@@ -82,7 +83,7 @@ const Stars = styled.span`
   position: relative;
   float: left;
   color: ${COLOURS.packageText};
-  font-size: 2.25vh;
+  font-size: ${FONT_SIZES.packageStars};
   padding-left: 20px;
   margin-left: 15px;
   padding-top: 2px;

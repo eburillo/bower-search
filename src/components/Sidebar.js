@@ -6,15 +6,15 @@ class Sidebar extends Component {
   render() {
     return (
       <Aside>
-        <p>Web sites are made of lots of things — frameworks, libraries, assets, and utilities. Bower manages all these things for you.
-
-Keeping track of all these packages and making sure they are up to date (or set to the specific versions you need) is tricky. Bower to the rescue! </p>
+        <AsideLink href="https://www.linkedin.com/in/enrique-burillo-jiménez-87374256">LinkedIn</AsideLink>
+        <AsideLink href="https://github.com/eburillo">Github</AsideLink>
       </Aside>
     );
   }
 }
 
 const MEDIAQUERIES = variables.mq;
+const COLOURS = variables.colours;
 
 const Aside = styled.aside`
   display: inline-block;
@@ -25,6 +25,19 @@ const Aside = styled.aside`
   @media (max-width: ${MEDIAQUERIES.mobile}) {
     display: none;
   }
+`;
+
+const AsideLink = styled.a`
+  font-size: 13px;
+  margin: 0 0 6px;
+  display: block;
+  font-weight: lighter;
+  text-decoration: none;
+  color: ${COLOURS.packageTitle};
+  &:hover {
+    text-decoration: underline;
+  }
+
 `;
 
 export default Sidebar;

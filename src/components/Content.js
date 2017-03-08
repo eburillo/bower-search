@@ -25,7 +25,6 @@ const MainContainer = styled.section`
   display: inline-block;
   vertical-align: top;
   width: 50%;
-  height: 100%;
   @media (max-width: ${MEDIAQUERIES.mobile}) {
     width: 100%;
     padding: 5px 20px;

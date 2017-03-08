@@ -23,7 +23,6 @@ const StyledListHeader = styled.header`
   margin-bottom: 1vh;
   height: 50px;
   padding: 8px;
-  text-align: center;
 `;
 
 const SortHeader = styled.span`
@@ -40,6 +39,7 @@ const SortControls = styled.div`
   float: right;
   height: 34px;
   padding-top: 4px;
+  padding-left: 10px;
 `;
 
 export default ListHeader;

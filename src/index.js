@@ -27,11 +27,7 @@ injectGlobal`
     padding: 0;
     font-family: sans-serif;
     font-weight: lighter;
-    height: 100%;
     padding-bottom: 30px;
     position: relative;
-  }
-  #root {
-    height: 100%;
   }
 `;
