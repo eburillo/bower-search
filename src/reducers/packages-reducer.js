@@ -10,9 +10,9 @@ const messages = {
 const initialState = {
 	packages: {
 		message: "",
-		list: [],
-    currentPage: 1
-	}
+		list: []
+	},
+  currentPage: 1
 }
 
 const _getOwner = (obj) => {
