@@ -23,7 +23,7 @@ class MessageContainer extends Component {
 
 const mapStateToProps = (store) => {
 	return ({
-		packages: store.packages
+		packages: store.PackagesReducer
 	})
 }
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import { shallow } from 'enzyme';
 import store from '../store.js';
 import App from '../components/App';
 

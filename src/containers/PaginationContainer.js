@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import {setPage} from '../actions/packages-actions.js';
+import {setPage} from '../actions/pagination-actions.js';
 import Pagination from '../components/Pagination';
 
 export class PaginationContainer extends Component {
@@ -31,8 +31,8 @@ const mapDispatchToProps = (dispatch) => {
 
 const mapStateToProps = function(store) {
 	return ({
-		packages: store.packages,
-    currentPage: store.currentPage
+		packages: store.PackagesReducer,
+    currentPage: store.PaginationReducer.currentPage
 	})
 }
 

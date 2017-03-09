@@ -3,7 +3,7 @@ import ActionTypes from './action-types.js'
 export function getPackagesSuccess(packages) {
 	return {
 		type: ActionTypes.GET_PACKAGES_SUCCESS,
-		packages: packages
+		packages
 	}
 }
 
@@ -34,12 +34,5 @@ export function sortByOwner() {
 export function sortByStars() {
 	return {
 		type: ActionTypes.SORT_BY_STARS
-	}
-}
-
-export function setPage(page) {
-	return {
-		type: ActionTypes.SET_PAGE,
-		currentPage: page
 	}
 }

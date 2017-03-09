@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
 import store from '../store.js';
 import {sortByName, sortByOwner, sortByStars} from '../actions/packages-actions.js';
+import {setPage} from '../actions/pagination-actions';
 import SortButton from '../components/SortButton';
 
 export class SortButtonContainer extends Component {
@@ -24,9 +26,15 @@ export class SortButtonContainer extends Component {
         break;
       default:
     }
-
+    this.props.setPage(1);
   }
 
 }
 
-export default SortButtonContainer;
+const mapDispatchToProps = (dispatch) => {
+  return ({
+    setPage: (page) => {dispatch(setPage(page))}
+  })
+}
+
+export default connect(null, mapDispatchToProps) (SortButtonContainer);

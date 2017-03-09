@@ -24,8 +24,8 @@ export class ListContainer extends Component {
 
 const mapStateToProps = function(store) {
 	return ({
-		packages: store.packages,
-    currentPage: store.currentPage
+		packages: store.PackagesReducer,
+    currentPage: store.PaginationReducer.currentPage
 	})
 }
 

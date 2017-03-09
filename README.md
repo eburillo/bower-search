@@ -1,10 +1,18 @@
 # Bower Search App
 
-### Under development
+A packages search tool inspired in https://bower.io/search/
 
-A simply Bower search tool like https://bower.io/search/
+The project was bootstrapped with Create-react-app and developed using Redux and Styled Components.
+The folder structure is the following one:
 
-Done with React + Redux and Styled Components.
+- __tests__/ - includes some unit tests
+- actions/ - their definitions and types
+- api/ - data fetching from http://libraries.io
+- assets/ - icons used in the app
+- components/ - presentational (styles, markup)
+- containers/ - smart/logic components
+- reducers/ - mutations of the state
+- styles/ - variables definitions for colors, sizes..
 
 ## Scripts
 

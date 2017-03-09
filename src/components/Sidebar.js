@@ -6,8 +6,8 @@ class Sidebar extends Component {
   render() {
     return (
       <Aside>
-        <AsideLink href="https://www.linkedin.com/in/enrique-burillo-jiménez-87374256">LinkedIn</AsideLink>
-        <AsideLink href="https://github.com/eburillo">Github</AsideLink>
+        <AsideLink target="_blank" href="https://www.linkedin.com/in/enrique-burillo-jiménez-87374256">LinkedIn</AsideLink>
+        <AsideLink target="_blank" href="https://github.com/eburillo">Github</AsideLink>
       </Aside>
     );
   }
@@ -30,7 +30,8 @@ const Aside = styled.aside`
 const AsideLink = styled.a`
   font-size: 13px;
   margin: 0 0 6px;
-  display: block;
+  float: left;
+  clear: left;
   font-weight: lighter;
   text-decoration: none;
   color: ${COLOURS.packageTitle};

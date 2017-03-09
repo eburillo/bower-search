@@ -4,18 +4,18 @@ import variables from '../styles/variables';
 import Header from './Header';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
-import ContentContainer from '../containers/ContentContainer';
+import Content from './Content';
 
 class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Header></Header>
+        <Header/>
         <Main>
-          <Sidebar></Sidebar>
-          <ContentContainer></ContentContainer>
+          <Sidebar/>
+          <Content/>
         </Main>
-        <Footer></Footer>
+        <Footer/>
       </Wrapper>
     );
   }

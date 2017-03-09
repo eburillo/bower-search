@@ -1,4 +1,5 @@
-import packagesReducer from '../reducers/packages-reducer'
+import packagesReducer from '../reducers/packages-reducer';
+import paginationReducer from '../reducers/pagination-reducer';
 import ActionTypes from '../actions/action-types';
 
 describe('packages reducer', () => {
@@ -7,11 +8,9 @@ describe('packages reducer', () => {
       packagesReducer(undefined, {})
     ).toEqual(
       {
-        packages: {
-      		message: "",
-      		list: []
-      	},
-        currentPage: 1
+    		message: "",
+  		  list: [],
+        orderedBy: ""
       }
     )
   })
@@ -24,11 +23,34 @@ describe('packages reducer', () => {
       })
     ).toEqual(
         {
-          packages: {
-        		message: "",
-        		list: [{name: "jquery"}, {name: "bootstrap"}]
-        	},
-          currentPage: 1
+      		message: "",
+      		list: [{name: "jquery"}, {name: "bootstrap"}],
+          orderedBy: ""
+        }
+    )
+  })
+})
+
+describe('pagination reducer', () => {
+  it('should return the initial state', () => {
+    expect(
+      paginationReducer(undefined, {})
+    ).toEqual(
+      {
+    		currentPage: 1
+      }
+    )
+  })
+
+  it('should handle SET_PAGE', () => {
+    expect(
+      paginationReducer({}, {
+        type: ActionTypes.SET_PAGE,
+        currentPage: 2
+      })
+    ).toEqual(
+        {
+      		currentPage: 2
         }
     )
   })
